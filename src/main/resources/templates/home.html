@@ -5,12 +5,28 @@
     <title>Feng's Blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower&display=swap" rel="stylesheet">
+
     <style>
         .jumbotron {
             background: url(https://nyc3.digitaloceanspaces.com/aph/app/uploads/2019/02/26161133/iStock-904084674.jpg) fixed center no-repeat;
             background-size: cover;
             margin: 0
         }
+        .img-thumbnail {
+            width:20%;
+            height:35%;
+            padding: 18px 18px 18px 18px;
+            margin: 3em;
+        }
+
+        .img-thumbnail2 {
+            width:20%;
+            height:40%;
+            padding: 18px 18px 18px 18px;
+            margin: 2em;
+        }
+
     </style>
 
 </head>
@@ -34,6 +50,7 @@
 
         <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
             <div class="card-body text-dark">
+                <img class="img-thumbnail rounded float-left" th:src="@{/githublogo.png}" alt="github logo">
                 GitHub facilitates social coding by providing a web interface to the Git code repository and management tools for collaboration. GitHub can be thought of as a serious social networking site for software developers. Members can follow each other, rate each other's work, receive updates for specific projects and communicate publicly or privately.
                 Three important terms used by developers in GitHub are fork, pull request and merge. A fork, also known as a branch, is simply a repository that has been copied from one member's account to another member's account. Forks and branches allow a developer to make modifications without affecting the original code. If the developer would like to share the modifications, she can send a pull request to the owner of the original repository. If, after reviewing the modifications, the original owner would like to pull the modifications into the repository, she can accept the modifications and merge them with the original repository. Commits are, by default, all retained and interleaved onto the master project, or can be combined into a simpler merge via commit squashing.
             </div>
@@ -51,6 +68,7 @@
         </div>
         <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
             <div class="card-body text-dark">
+                <img class="img-thumbnail rounded float-left" th:src="@{/githublogo.png}" alt="github logo">
                 <ul>
                     <li>Documentation
                         <p>By using GitHub, you make it easier to get excellent documentation. Their help section and guides have articles for nearly any topic related to git that you can think of.</p>
@@ -77,6 +95,7 @@
         </div>
         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
             <div class="card-body text-dark">
+                <img class="img-thumbnail2 rounded float-left" th:src="@{/javalogo2.png}" alt="java logo">
                 <p>Java Virtual Machine will always look for a specific method signature to start running an application, and that would be public static void main(String args[]). Here args is an argument of the type String array. String array argument can also be written as String[] args. Though type of the argument(String array) is fixed, you can still change the name from args to anything.</p>
                 <p>Also with the introduction of java args, instead of writing String args[], String… args can be used.  Keep learning to know more about each and every keyword.</p>
                 <b>Public</b>
@@ -108,6 +127,7 @@
         </div>
         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
             <div class="card-body text-dark">
+                <img class="img-thumbnail rounded float-left" th:src="@{/javalogo2.png}" alt="java logo">
                 <p>Variables are eligible for all of the below-mentioned modifiers.</p>
 
 
