@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <title>about me</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+          integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css?family=Exo:300&display=swap" rel="stylesheet">
+    <style>
+        .jumbotron {
+            background: url(https://nyc3.digitaloceanspaces.com/aph/app/uploads/2019/02/26161133/iStock-904084674.jpg) fixed center no-repeat;
+            background-size: cover;
+            margin: 0;
+        }
+        .img-thumbnail {
+            width:30%;
+            height:30%;
+        }
+    </style>
+</head>
+<body>
+<div th:replace="base :: cover"></div>
+<div th:replace="base :: navlinks"></div>
+<br/>
+<div class="container">
+    <p>
+        <div class="media">
+            <img th:src="@{blogpic2.jpg}"  class="img-thumbnail align-self-center mr-3 s" alt="profile picture">
+            <div class="media-body align-self-center">
+                <h5 class="mt-0">Feng Lin</h5>
+                <p class="lead text-muted">Future Cybersecurity Analyst/Software Developer</p>
+                <p class="mb-0">Hi, I'm aspired to be a cybersecurity analyst and software developer. I've taken several boot camps at Montgomery College Information Technology Institute.
+                    The boot camps were Data Analytics, Cyber Boot Camp, and currently I'm enrolled in Java Web Developer Boot Camp.</p>
+    <br/>
+        <script src="https://platform.linkedin.com/in.js" type="text/javascript">lang: en_US</script>
+        <script type="IN/Share" data-url="https://www.linkedin.com"></script>
+</div>
+</div>
+
+    </p>
+</div>
+
+<div th:replace="base :: footer"></div>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>

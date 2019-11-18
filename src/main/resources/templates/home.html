@@ -5,103 +5,136 @@
     <title>Feng's Blog</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        .jumbotron {
+            background: url(https://nyc3.digitaloceanspaces.com/aph/app/uploads/2019/02/26161133/iStock-904084674.jpg) fixed center no-repeat;
+            background-size: cover;
+            margin: 0
+        }
+    </style>
+
 </head>
 <body>
+<div th:replace="base :: cover"></div>
+<div th:replace="base :: navlinks"></div>
+<br/>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-secondary">
-    <a class="navbar-brand" href="#">Navbar</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-            </li>
-            <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    Dropdown
-                </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                    <a class="dropdown-item" href="#">Action</a>
-                    <a class="dropdown-item" href="#">Another action</a>
-                    <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="#">Something else here</a>
-                </div>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-            </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-    </div>
-</nav>
-<div class="bd-example">
-    <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-        <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
-        </ol>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img th:src="@{/githublogo.png}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>First slide label</h5>
-                    <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img th:src="@{/java.png}" class="d-block w-100" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Second slide label</h5>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img th:src="@{/bootstrap.png}" class="d-block w-100 h-20" alt="...">
-                <div class="carousel-caption d-none d-md-block">
-                    <h5>Third slide label</h5>
-                    <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                </div>
-            </div>
-        </div>
-        <a class="carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-        </a>
-        <a class="carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-        </a>
-    </div>
-</div>
-<br />
 <div class="container">
-    <div class="row">
-        <div class="col-2">
+<div class="accordion" id="accordionExample">
+    <div class="card">
+        <div class="card-header" id="headingOne">
+            <h2 class="mb-0">
+            <h5 class="card-title text-center">October 21, 2019</h5>
+            <p class="card-text text-center">What is GitHub?</p>
+                <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Read More...
+                </button>
+            </h2>
         </div>
-        <div class="col-8">
-            <div class="card text-center">
-                <img th:src="@{/githublogo.png}" class="card-img-top" alt="github image">
-                <div class="card-body">
-                    <h5 class="card-title">Special title treatment</h5>
-                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                </div>
+
+        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordionExample">
+            <div class="card-body text-dark">
+                GitHub facilitates social coding by providing a web interface to the Git code repository and management tools for collaboration. GitHub can be thought of as a serious social networking site for software developers. Members can follow each other, rate each other's work, receive updates for specific projects and communicate publicly or privately.
+                Three important terms used by developers in GitHub are fork, pull request and merge. A fork, also known as a branch, is simply a repository that has been copied from one member's account to another member's account. Forks and branches allow a developer to make modifications without affecting the original code. If the developer would like to share the modifications, she can send a pull request to the owner of the original repository. If, after reviewing the modifications, the original owner would like to pull the modifications into the repository, she can accept the modifications and merge them with the original repository. Commits are, by default, all retained and interleaved onto the master project, or can be combined into a simpler merge via commit squashing.
             </div>
         </div>
-        <div class="col-2">
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h2 class="mb-0">
+                <h5 class="card-title text-center">October 22, 2019</h5>
+                <p class="card-text text-center">What I Like about GitHub</p>
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Read More...
+                </button>
+            </h2>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+            <div class="card-body text-dark">
+                <ul>
+                    <li>Documentation
+                        <p>By using GitHub, you make it easier to get excellent documentation. Their help section and guides have articles for nearly any topic related to git that you can think of.</p>
+                    </li>
+                    <li> Showcase your work
+                        <p>Are you a developer and wishes to attract recruiters? GitHub is the best tool you can rely on for this. Today, when searching for new recruits for their project, most companies look into the GitHub profiles. If your profile is available, you will have a higher chance of being recruited even if you are not from a great university or college.</p>
+                    </li>
+                    <li>Track changes in your code across versions
+                        <p>When multiple people collaborate on a project, it’s hard to keep track revisions—who changed what, when, and where those files are stored. GitHub takes care of this problem by keeping track of all the changes that have been pushed to the repository. Much like using Microsoft Word or Google Drive, you can have a version history of your code so that previous versions are not lost with every iteration.</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingThree">
+            <h2 class="mb-0">
+                <h5 class="card-title text-center">October 23, 2019</h5>
+                <p class="card-text text-center">public static void main(string args[]) Explanation</p>
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Read More...
+                </button>
+            </h2>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordionExample">
+            <div class="card-body text-dark">
+                <p>Java Virtual Machine will always look for a specific method signature to start running an application, and that would be public static void main(String args[]). Here args is an argument of the type String array. String array argument can also be written as String[] args. Though type of the argument(String array) is fixed, you can still change the name from args to anything.</p>
+                <p>Also with the introduction of java args, instead of writing String args[], String… args can be used.  Keep learning to know more about each and every keyword.</p>
+                <b>Public</b>
+                <p>It is an Access Modifier, which defines who can access this Method. Public means that this Method will be accessible by any Class(If other Classes can access this Class.).</p>
+
+                <b>Static</b>
+                <p>Static is a keyword that identifies the class-related thing. It means the given Method or variable is not instance-related but Class related. It can be accessed without creating the instance of a Class.</p>
+
+                <b>Void</b>
+                <p>It is used to define the Return Type of the Method. It defines what the method can return. Void means the Method will not return any value.</p>
+
+                <b>main</b>
+                <p>Main is the name of the Method. This Method name is searched by JVM as a starting point for an application with a particular signature only.</p>
+
+                <b>String args[] / String… args</b>
+                <p>It is the parameter to the main method. The argument name could be anything.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card">
+        <div class="card-header" id="headingFour">
+            <h2 class="mb-0">
+                <h5 class="card-title text-center">October 25, 2019</h5>
+                <p class="card-text text-center">Access Modifiers for Instance & Static Variables</p>
+                <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    Read More...
+                </button>
+            </h2>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordionExample">
+            <div class="card-body text-dark">
+                <p>Variables are eligible for all of the below-mentioned modifiers.</p>
+
+
+                <b>Default</b>
+                <p>If a variable is set to default, it will be accessible to the classes which are defined in the same package. Any method in same package class can access the variable via Inheritance or Direct access.</p>
+
+                <b>Public</b>
+                <p>If a variable is set to the public it can be accessed from any class available in the java world. Any method in any class can access the given variable via Inheritance or Direct access.</p>
+
+                <b>Protected</b>
+                <p>If a variable is set to protected inside a class, it will be accessible from its subclasses defined in the same or different package only via Inheritance.</p>
+
+                <b>Private</b>
+                <p>A variable defined private will be accessible only from within the class in which it is defined. Such variables are not accessible from outside the defined class, not even in its subclass.</p>
+
+            </div>
         </div>
     </div>
 </div>
+</div>
+
+
+
+
+<br \>
+<br \>
+<div th:replace="base :: footer"></div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
